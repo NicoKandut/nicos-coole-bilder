@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "fs": "^0.0.1-security",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/NicoKandut/nicos-coole-bilder/issues"
   },
-  "homepage": "https://github.com/NicoKandut/nicos-coole-bilder#readme"
+  "homepage": "https://github.com/NicoKandut/nicos-coole-bilder#readme",
+  "cacheDirectories": [
+    ".next/cache"
+  ]
 }
