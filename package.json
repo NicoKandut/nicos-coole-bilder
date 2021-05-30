@@ -1,0 +1,27 @@
+{
+  "name": "nicos-coole-bilder",
+  "version": "1.0.0",
+  "description": "A cool application for sharing images",
+  "main": "pages/index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "next": "10.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoKandut/nicos-coole-bilder.git"
+  },
+  "author": "Nico Knadut",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/NicoKandut/nicos-coole-bilder/issues"
+  },
+  "homepage": "https://github.com/NicoKandut/nicos-coole-bilder#readme"
+}
