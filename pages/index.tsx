@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import PictureList from "../components/pictureList";

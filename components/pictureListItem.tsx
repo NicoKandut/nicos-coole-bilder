@@ -1,16 +1,14 @@
 import React from "react";
-import Image from "next/image";
 
-export default function PictureListItem(props) {
+export default function PictureListItem(props: { picture: string }) {
   const { picture } = props;
 
   return (
     <div>
-      <Image
+      <img
+        className="object-cover"
         src={`/pictures/${picture}`}
         alt={picture}
-        width="100"
-        height="150"
       />
     </div>
   );

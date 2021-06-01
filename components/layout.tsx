@@ -1,8 +1,8 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import Header from "./header";
 import Footer from "./footer";
 
-export default function Layout(props) {
+export default function Layout(props: PropsWithChildren<{}>) {
   const { children } = props;
 
   return (
