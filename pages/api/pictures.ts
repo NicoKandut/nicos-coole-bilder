@@ -18,7 +18,8 @@ const picturesHandler: NextApiHandler = (req, res) => {
         .status(200)
         .json(
           result.resources.map(
-            (resource: Record<string, unknown>) => resource.public_id
+            (resource: Record<string, unknown>) =>
+              resource.public_id + "." + resource.format
           )
         )
     })
