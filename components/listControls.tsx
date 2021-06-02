@@ -1,3 +1,5 @@
+import { faList, faThLarge } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React, { useState } from "react"
 import Chip from "./chip"
 import SearchField from "./searchField"
@@ -19,12 +21,14 @@ export default function ListControls(): JSX.Element {
         active={layoutType === LayoutType.LIST}
         onClick={() => setLayoutType(LayoutType.LIST)}
       >
+        <FontAwesomeIcon icon={faList} />
         <span>List</span>
       </Chip>
       <Chip
         active={layoutType === LayoutType.GRID}
         onClick={() => setLayoutType(LayoutType.GRID)}
       >
+        <FontAwesomeIcon icon={faThLarge} />
         <span>Grid</span>
       </Chip>
     </div>

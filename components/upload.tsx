@@ -21,9 +21,6 @@ export default function Upload(): JSX.Element {
       // Update the formData object
       formData.append(selectedFile.name, selectedFile, selectedFile.name)
 
-      // Details of the uploaded file
-      console.log(selectedFile)
-
       // Request made to the backend api
       // Send formData object
 
