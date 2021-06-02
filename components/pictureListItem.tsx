@@ -1,15 +1,19 @@
-import React from "react";
+import React from "react"
 
-export default function PictureListItem(props: { picture: string }) {
-  const { picture } = props;
+export default function PictureListItem(props: {
+  picture: string
+}): JSX.Element {
+  const { picture } = props
 
   return (
-    <div>
-      <img
-        className="object-cover"
-        src={`/pictures/${picture}`}
-        alt={picture}
-      />
+    <div className="">
+      <div className="aspect-w-1 aspect-h-1">
+        <img
+          className="object-cover rounded"
+          src={`/pictures/${picture}`}
+          alt={picture}
+        />
+      </div>
     </div>
-  );
+  )
 }

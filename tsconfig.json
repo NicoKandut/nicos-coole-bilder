@@ -2,6 +2,7 @@
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
     "pretty": true,
+    "strict": true,
     "jsx": "preserve",
     "preserveConstEnums": true,
     "lib": [
@@ -9,11 +10,12 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
     "noEmit": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "checkJs": false,
+    "allowJs": true
   },
   "include": [
     "components/**/*",

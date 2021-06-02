@@ -1,1 +1,1 @@
-export const pictureFilter = [".jpg", ".png", ".webp", ".ico"];
+export const pictureFilter = [".jpg", ".png", ".webp", ".ico"]
