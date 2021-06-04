@@ -3,9 +3,10 @@ import Layout from "../components/layout"
 import ListControls from "../components/listControls"
 import PictureList from "../components/pictureList"
 import Upload from "../components/upload"
+import PictureData from "../logic/types/pictureData"
 
 export default function Home(): JSX.Element {
-  const [pictures, setPictures] = useState([])
+  const [pictures, setPictures] = useState<PictureData[]>([])
 
   useEffect(() => {
     fetch("/api/pictures")

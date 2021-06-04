@@ -8,7 +8,7 @@ export default function Layout(
   const { children } = props
 
   return (
-    <div className="layout-container bg-gray-900 text-gray-50">
+    <div className="layout-container bg-layer-0 text-white">
       <div className="container mx-auto flex flex-col gap-5  h-full">
         <Header />
         <main className="flex flex-col flex-grow">{children}</main>

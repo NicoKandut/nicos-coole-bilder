@@ -47,6 +47,7 @@
     "autoprefixer": "^10.2.6",
     "eslint": "^7.27.0",
     "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^8.3.0",
     "tailwind": "^4.0.0",
     "tailwindcss": "^2.1.4",

@@ -13,15 +13,7 @@ const picturesHandler: NextApiHandler = (req, res) => {
     .expression("folder:pictures/*")
     .execute()
     .then((result) => {
-      console.log(result)
-      res
-        .status(200)
-        .json(
-          result.resources.map(
-            (resource: Record<string, unknown>) =>
-              resource.public_id + "." + resource.format
-          )
-        )
+      res.status(200).json(result.resources)
     })
 }
 

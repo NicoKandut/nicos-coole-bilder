@@ -15,7 +15,7 @@ export default function NavbarLink(props: NavbarLinkProps): JSX.Element {
 
   return (
     <Link href={href}>
-      <a className={active ? "text-primary-500" : "text-current"}>{title}</a>
+      <a className={active ? "text-primary" : "text-current"}>{title}</a>
     </Link>
   )
 }

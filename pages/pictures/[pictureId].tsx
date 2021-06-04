@@ -1,5 +1,9 @@
-import Layout from "../../components/layout";
+import { useRouter } from "next/router"
+import Layout from "../../components/layout"
 
-export default function PicturePage() {
-  return <Layout></Layout>;
+export default function PicturePage(): JSX.Element {
+  const router = useRouter()
+  const { pictureId } = router.query
+
+  return <Layout>{pictureId}</Layout>
 }

@@ -9,7 +9,7 @@ export default function SearchField(props: {
   const { value, setValue } = props
 
   return (
-    <div className="flex flex-row items-center gap-1 rounded-full px-3 bg-white text-black border-primary-500 border-2 focus-within:outline-white">
+    <div className="flex flex-row items-center gap-1 rounded-full px-3 bg-white text-black border-primary border-2 focus-within:outline-white">
       <FontAwesomeIcon icon={faSearch} />
       <input
         value={value}

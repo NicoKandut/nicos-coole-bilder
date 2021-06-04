@@ -7,8 +7,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.indigo,
+        primary: {
+          DEFAULT: colors.teal[400],
+          bright: colors.teal[500],
+          dim: colors.teal[200],
+        },
+        layer: {
+          0: colors.blueGray[900],
+          1: colors.blueGray[800],
+          2: colors.blueGray[700],
+          3: colors.blueGray[600],
+        },
       },
+      pointerEvents: ["hover"],
     },
   },
   variants: {

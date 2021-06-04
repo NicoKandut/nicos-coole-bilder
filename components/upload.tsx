@@ -1,16 +1,22 @@
-import React, { ChangeEventHandler, useState } from "react"
+import { faUpload } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React, { ChangeEventHandler, useCallback, useState } from "react"
 import FileDetails from "./fileDetails"
 
 export default function Upload(): JSX.Element {
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
 
-  const onFileChange: ChangeEventHandler<HTMLInputElement> = (event) => {
-    // Update the state
-    const file = event.target?.files?.[0]
-    if (file) {
-      setSelectedFile(file)
-    }
-  }
+  const onFileChange: ChangeEventHandler<HTMLInputElement> = useCallback(
+    (event) => {
+      if (selectedFile) console.log("a")
+      // Update the state
+      const file = event.target?.files?.[0]
+      if (file) {
+        setSelectedFile(file)
+      }
+    },
+    []
+  )
 
   // On file upload (click the upload button)
   const onFileUpload = () => {
@@ -33,13 +39,17 @@ export default function Upload(): JSX.Element {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="inline-flex w-min flex-row items-center gap-1 rounded-full bg-white text-black border-primary-500 border-2 overflow-hidden focus-within:outline-white">
+      <div className="inline-flex w-min flex-row items-center gap-1 rounded-full bg-white text-black border-primary border-2 overflow-hidden focus-within:outline-white">
         <input type="file" onChange={onFileChange} />
         <button
-          className="bg-primary-500 text-white h-full px-3"
+          disabled={selectedFile === null}
+          className={`inline-flex items-center gap-3 ${
+            selectedFile === null ? "bg-gray-300" : "bg-primary"
+          } text-white h-full px-3`}
           onClick={onFileUpload}
         >
-          Upload
+          <FontAwesomeIcon icon={faUpload} />
+          <span>Upload</span>
         </button>
       </div>
 
