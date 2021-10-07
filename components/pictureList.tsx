@@ -8,7 +8,7 @@ export default function PictureList(props: {
   const { pictures } = props
 
   return (
-    <div className="grid grid-flow-col grid-cols-4 gap-2">
+    <div className="grid grid-cols-4 gap-2">
       {pictures.map((picture) => (
         <PictureListItem key={picture.public_id} picture={picture} />
       ))}

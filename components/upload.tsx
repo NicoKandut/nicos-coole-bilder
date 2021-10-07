@@ -8,7 +8,6 @@ export default function Upload(): JSX.Element {
 
   const onFileChange: ChangeEventHandler<HTMLInputElement> = useCallback(
     (event) => {
-      if (selectedFile) console.log("a")
       // Update the state
       const file = event.target?.files?.[0]
       if (file) {
